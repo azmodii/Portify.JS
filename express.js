@@ -80,6 +80,7 @@ function gplayTakeover(){
 			window.basejs = "https://" + window.htmldata.split("/listen_extended_.js")[0].split('https://')[window.htmldata.split("/listen_extended_.js")[0].split('https://').length-1] + "/";
 			window.listensrc = window.basejs + "listen_extended_.js";
 			window.sjsrc = window.basejs + "sj_srcs.js";
+			console.log(window.basejs);
 			document.write(data.replace("listen_extended_.js", "").replace("sj_srcs.js",""));
 			$.ajax({
 					url : window.sjsrc,
@@ -111,7 +112,7 @@ function gplayTakeover(){
 							.text('* {transition: none !important;}')
 							.appendTo('head');
 						document.close();
-						$.getScript("https://rawgit.com/jordam/Portify.JS/master/portify.js");
+						$.getScript("https://rawgit.com/azmodii/Portify.JS/master/portify.js");
 					}
 				});
 			}, 1000);
