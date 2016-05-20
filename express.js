@@ -77,10 +77,10 @@ function gplayTakeover(){
 		dataType: "text",
 		success : function (data) {
 			window.htmldata = data;
-			window.basejs = "https://" + window.htmldata.split("/listen.js")[0].split('https://')[window.htmldata.split("/listen.js")[0].split('https://').length-1] + "/";
-			window.listensrc = window.basejs + "listen.js";
+			window.basejs = "https://" + window.htmldata.split("/listen_extended_.js")[0].split('https://')[window.htmldata.split("/listen_extended_.js")[0].split('https://').length-1] + "/";
+			window.listensrc = window.basejs + "listen_extended_.js";
 			window.sjsrc = window.basejs + "sj_srcs.js";
-			document.write(data.replace("listen.js", "").replace("sj_srcs.js",""));
+			document.write(data.replace("listen_extended_.js", "").replace("sj_srcs.js",""));
 			$.ajax({
 					url : window.sjsrc,
 					dataType: "text",
