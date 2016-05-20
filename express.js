@@ -80,7 +80,7 @@ function gplayTakeover(){
 			window.basejs = "https://" + window.htmldata
 				.split("/listen_extended_.js")[0]
 				.split('https://')[window.htmldata.split("/listen_extended_.js")[0].split('https://').length-1]
-				.replace('listen_extended_80d882f312bf67807b5b6042e9718ae316b77d10.js"></script><div class="gb_1a"></div><script type="text/javascript"></script></body></html>', '') + "/";
+				.replace('listen_extended_80d882f312bf67807b5b6042e9718ae316b77d10.js"></script><div class="gb_1a"></div><script type="text/javascript"></script></body></html>', '');
 
 			//window.basejs = "https://" + window.htmldata.split("/listen_extended_.js")[0].split('https://')[window.htmldata.split("/listen_extended_.js")[0].split('https://').length-1] + "/";
 			window.listensrc = window.basejs + "listen_extended_80d882f312bf67807b5b6042e9718ae316b77d10.js";
