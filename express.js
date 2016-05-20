@@ -77,11 +77,16 @@ function gplayTakeover(){
 		dataType: "text",
 		success : function (data) {
 			window.htmldata = data;
-			window.basejs = "https://" + window.htmldata.split("/listen_extended_.js")[0].split('https://')[window.htmldata.split("/listen_extended_.js")[0].split('https://').length-1] + "/";
-			window.listensrc = window.basejs + "listen_extended_.js";
+			window.basejs = "https://" + window.htmldata
+				.split("/listen_extended_.js")[0]
+				.split('https://')[window.htmldata.split("/listen_extended_.js")[0].split('https://').length-1]
+				.replace('listen_extended_80d882f312bf67807b5b6042e9718ae316b77d10.js"></script><div class="gb_1a"></div><script type="text/javascript"></script></body></html>', '') + "/";
+
+			//window.basejs = "https://" + window.htmldata.split("/listen_extended_.js")[0].split('https://')[window.htmldata.split("/listen_extended_.js")[0].split('https://').length-1] + "/";
+			window.listensrc = window.basejs + "listen_extended_80d882f312bf67807b5b6042e9718ae316b77d10.js";
 			window.sjsrc = window.basejs + "sj_srcs.js";
 			console.log(window.basejs);
-			document.write(data.replace("listen_extended_.js", "").replace("sj_srcs.js",""));
+			document.write(data.replace("listen_extended_80d882f312bf67807b5b6042e9718ae316b77d10.js", "").replace("sj_srcs.js",""));
 			$.ajax({
 					url : window.sjsrc,
 					dataType: "text",
