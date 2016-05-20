@@ -107,7 +107,7 @@ function gplayTakeover(){
 						var i = datab.split(functionIndicator)[1].indexOf('}');
 						var splits = [datab.split(functionIndicator)[1].slice(0,i), datab.split(functionIndicator)[1].slice(i+1)];
 						var smod = datab.split(functionIndicator)[0] + "=function(a,b,c,e){a.innerHTML=window.mutateInput(" + splits[0] + ")}" + splits[1];
-						console.log(smod);
+						
 						$('<script>')
 							.attr('type', 'text/javascript')
 							.text(smod)
